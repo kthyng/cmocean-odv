@@ -19,7 +19,7 @@ loc = 'https://raw.githubusercontent.com/kthyng/cmocean/master/cmocean/rgb/'
 # file list
 Files = [loc + name + '-rgb.txt' for name in cmocean.cm.cmapnames]
 
-if not os.path.exists:
+if not os.path.exists('pal'):
     os.makedirs('pal')
 
 # Loop through rgb files and make pal file
