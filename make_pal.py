@@ -13,8 +13,7 @@ import cmocean
 N = 113
 
 # location of local rgb files
-# Update to matplotlib from kthyng once matplotlib is updated.
-loc = 'https://raw.githubusercontent.com/kthyng/cmocean/master/cmocean/rgb/'
+loc = 'https://raw.githubusercontent.com/matplotlib/cmocean/master/cmocean/rgb/'
 
 # file list
 Files = [loc + name + '-rgb.txt' for name in cmocean.cm.cmapnames]
@@ -39,7 +38,7 @@ for File in Files:
     f = open('pal/' + fname + '.pal', 'w')
 
     # fill in lines 0-31 from ODV default palette
-    odv = np.loadtxt('pal/Odv.pal')
+    odv = np.loadtxt('pal/Odv-save.pal')
     for j in range(32):
         f.write('%3i  %.3f  %.3f  %.3f\n' % (odv[j, 0], odv[j, 1], odv[j, 2], odv[j, 3]))
 
